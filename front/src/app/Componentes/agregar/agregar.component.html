@@ -1,0 +1,32 @@
+<app-menu></app-menu>
+
+<div class="container">
+    <div class="row vh-100 justify-content-center align-items-center">
+        <div class="col-auto bg-light p-5">
+            
+        <div class="col-md-3">
+            <h1 class="text-center">AGREGAR PRODUCTO</h1>
+        </div>
+       
+            <form>
+                <div class="input-group p-2">
+                    <input [(ngModel)]="Pokemon.id" class="form-control" type="text" id="id" name="id" placeholder="Id">
+                </div>
+                <div class="input-group p-2">
+                    <input [(ngModel)]="Pokemon.nombre" class="form-control" type="text" id="nombre" name="nombre" placeholder="nombre">
+                </div>
+                <div class="input-group p-2">
+                    <input [(ngModel)]="Pokemon.descripcion" class="form-control" type="text" id="descripcion" name="descripcion" placeholder="descripcion">
+                </div>
+                <div class="input-group p-2">
+                    <input [(ngModel)]="Pokemon.precio" class="form-control" type="number" id="precio" name="precio" placeholder="precio">
+                </div>
+               
+               
+                <div class="input-group p-2">
+                    <input class="form-control" type="file" (change)="getFile($event)">
+                </div>
+               
+                <button (click)="agregarPokemon()" class="btn btn-primary">Agregar</button>
+                <button (click)="sendFile()" class="btn btn-primary">Archivo</button>
+            </form>
